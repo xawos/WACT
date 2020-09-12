@@ -32,12 +32,11 @@ For convenience I've switched to port 2222 for testing, feel free to change that
 Keep in mind that unprivileged users can only run below port 1024 in Linux by default.
 
 ## Does it log?
-Yep, in 2 different files:
-	- `logs/log.txt`    logs all the commands entered, with prefixed IP
-	- `logs/ips.log`    for a list of only the IPs of the logins, just to have another service exposed on the internet tracking users.
+Yep, in the following file:
+	- `logs/log.txt`    logs all the commands entered, with prefixed IP, just to add another service logging user activity :P
 
 This whole thingy was built in a weekend plus a couple of hours, so don't judge :P 
 
-Based freely on [cheeseandcereal](https://github.com/cheeseandcereal)'s [fake-ssh](https://github.com/cheeseandcereal/fake-ssh), just like the following image (and as you may notice not the above one):
+Based freely on [cheeseandcereal](https://github.com/cheeseandcereal)'s [fake-ssh](https://github.com/cheeseandcereal/fake-ssh), just like the following image (but not the above one, you may notice the different hosts/usernames lol):
 
 ![Scan](images/nmap.png "Spoofed Banner")
