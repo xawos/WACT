@@ -1,0 +1,24 @@
+User:
+With over 63 moons, you might say I have a lot.
+Look with a telescope to see my big, red spot.
+The spot is a wind storm, swirling around.
+High in the night sky is where I can be found.
+
+Pass:
+
+#include <stdio.h>
+main() {
+  long long P = 1,
+            E = 2,
+            T = 5,
+            A = 61,
+            L = 251,
+            N = 3659,
+            R = 271173410,
+            G = 1479296389,
+            x[] = { G * R * E * E * N , P * L * A * N * E * T };
+  puts((char*)x);
+}
+
+gcc -o pass pass.c
+./pass | xxd | base64 | sha1sum | cut -d ' ' -f1

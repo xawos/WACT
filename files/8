@@ -1,0 +1,10 @@
+User: 
+No matter how hard you look, you'll never find me,
+Unless you have a telescope to help you see.
+I was once called a planet, but not any more.
+Now I'm just a Dwarf Planet, but too important to ignore.
+
+Pass:
+Search for the password used during the cold war in the event of the launch of nuclear missiles.
+Use it to encrypt "password" in 3des, then encode it in base64.
+Use the encoded base64 as the next level's password.

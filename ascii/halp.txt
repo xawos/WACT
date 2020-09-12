@@ -1,0 +1,22 @@
+.----------------------.
+| |'-.                 |
+| |   '.               |
+| |     '.  .------.   |
+| |    _'  /  .--.  \  |
+| |    \  |__|    |  | |
+| |-'\  \        /  /  |
+|     \  \      /  /   |
+|      \-'     /  /    |
+|             |  |     |
+|             |__|     |
+|              __      |
+|             |__|     |
+'----------------------'
+
+Supported Commands:
+sudo <cmd>
+cd | cat | ls | help | dog
+rm | pwd | id | whoami | tac
+destroy_penguins() | hack
+
+(And more! Hack around!)
