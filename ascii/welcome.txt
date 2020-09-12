@@ -12,4 +12,3 @@ There's also a couple of fun commands around, hack a little bit :)
 
 
 This thingy does not have full shell support yet, thus no backspace/arrows/special_characters allowed.
-It's a very dumb terminal, if you have any clue how to implement the above features in Python/Paramiko ping me please, I'm still investigating the feasibility.

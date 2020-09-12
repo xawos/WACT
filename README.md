@@ -38,6 +38,6 @@ Yep, in 2 different files:
 
 This whole thingy was built in a weekend plus a couple of hours, so don't judge :P 
 
-Based freely on [cheeseandcereal](https://github.com/cheeseandcereal)'s [fake-ssh](https://github.com/cheeseandcereal/fake-ssh), just like the following image and the above one:
+Based freely on [cheeseandcereal](https://github.com/cheeseandcereal)'s [fake-ssh](https://github.com/cheeseandcereal/fake-ssh), just like the following image (and as you may notice not the above one):
 
 ![Scan](images/nmap.png "Spoofed Banner")
