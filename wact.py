@@ -5,7 +5,9 @@ from time import sleep
 import traceback
 import threading
 import paramiko
+import datetime
 import socket
+import time
 import sys
 import csv
 import os
@@ -38,7 +40,7 @@ def handle_cmd(cmd, chan):
                 send_file(catfile, chan)
             else:
                 send_nope(chan)
-                response = catfile + " does not exist for real, ma bruh"
+                response = catfile + " does not exist, bruh"
         else:
             if os.path.isfile("files/{}".format(catfile)):
                 response = "\r\nNo touchy! Just watchy!\r\n"
@@ -49,7 +51,7 @@ def handle_cmd(cmd, chan):
                 response = "cat: '{}': No such file or directory".format(catfile)
     elif cmd.startswith("ls"):
         if cmd != "ls":
-            chan.send("No parameters allowed, bailing to default ls: \r\n")
+            chan.send("No arguments allowed, bailing to default ls: \r\n")
         arr = os.listdir('files/')
         ls = ""
         sortarr = sorted(arr)
@@ -100,7 +102,7 @@ def handle_cmd(cmd, chan):
         send_ascii("halp.txt", chan)
         return
     elif cmd.startswith("bash"):
-        response = "You silly, of course this is not bash ;)"
+        response = "You silly, of course you won't see Bash ;)"
     elif cmd == ":(){:|:&};:":
         for i in range(8):
             chan.send("-bash: fork: retry: Resource temporarily unavailable\r\n")
@@ -115,7 +117,9 @@ def handle_cmd(cmd, chan):
         send_nope(chan)
         response = "Use the 'help' command or try crying, maybe"
 
-    LOG.write(ip[0] + ": " + cmd + "\n")
+    ts = time.time()
+    timestamp = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d %H:%M:%S')
+    LOG.write(ip[0] + ":" + timestamp + " " + cmd + "\n")
     LOG.flush()
     chan.send(response + "\r\n")
 
@@ -138,7 +142,7 @@ def handle_admin(cmd, chan):
         wexe = cmd[4:].lstrip()
         send_admin(wexe)
         # Yeah, I know, it's dangerous, but it's admin. It even has a password.
-        # Saved in a CSV in cleartext. I've made all the possible security decisions wrong.
+        # Saved in a CSV in cleartext. I've made all the (wrong) possible security decisions.
     else:
         # bail to default handler
         handle_cmd(cmd, chan)
@@ -150,7 +154,6 @@ def send_something(folder, file, chan):
         for line in enumerate(thingy):
             chan.send(line[1] + "\r")
 
-# The following 3 functions are just wrappers for the above one
 def send_admin(file, chan):
     send_something(".", file, chan)
 
@@ -165,13 +168,12 @@ def send_ascii(file, chan):
 
 def check_auth_file(user, filename):
     # Ugly Auth via CSV file, checking first (user) and third (files) 
-    # fieldsi in the IAM_FILE for a match. The files are split by a `:`
+    # fields in the IAM_FILE for a match. The files are split by a `:`
     with open(IAM_FILE, 'r') as csvfile:
         csv_reader = csv.reader(csvfile)
         for row in csv_reader:
             if row[0] == user:
-                for file in row[2].split(":"):
-                    if file == filename:
+                if filename <= row[2]:
                         return True
     return False
 

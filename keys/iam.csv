@@ -1,12 +1,12 @@
-admin,nimda,1:2:3:4:5:6:7:8:9:10
+admin,nimda,10
 zero,zero,0
-mercury,keyboard,0:1
-venus,3611360,0:1:2
-earth,Congratulations!,0:1:2:3
-mars,Rain!,0:1:2:3:4
-jupyter,ae2b51fe3dd74ab4970dfc8dff290f31c86dbb25,0:1:2:3:4:5
-saturn,70836403655268464,0:1:2:3:4:5:6
-uranus,Rot13 best encryption ever!,0:1:2:3:4:5:6:7
-neptune,R2VvcmdpYSBHdWlkZXN0b25lcwo=,0:1:2:3:4:5:6:7:8
-pluto,xMF9yT2pAEc=,0:1:2:3:4:5:6:7:8:9
-shadow,darkness,0:1:2:3:4:5:6:7:8:9:price
+mercury,keyboard,1
+venus,3611360,2
+earth,Congratulations!,3
+mars,Rain!,4
+jupyter,ae2b51fe3dd74ab4970dfc8dff290f31c86dbb25,5
+saturn,70836403655268464,6
+uranus,Rot13 best encryption ever!,7
+neptune,R2VvcmdpYSBHdWlkZXN0b25lcwo=,8
+pluto,xMF9yT2pAEc=,9
+shadow,darkness,price
